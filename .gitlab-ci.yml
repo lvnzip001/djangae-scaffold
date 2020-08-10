@@ -1,0 +1,13 @@
+stages:
+  - test
+
+django22:
+  image: python:3.8
+  stage: test
+  before_script:
+    - pip install django==2.2
+    - django-admin.py startproject --template . --extension py,yaml,md myproject
+    - cd myproject
+    - pip install -r requirements
+  script:
+    - python manage.py test
