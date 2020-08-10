@@ -5,10 +5,12 @@ django22:
   image: python:3.8
   stage: test
   before_script:
+    - echo "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ buster main" | tee -a /etc/apt/sources.list.d/adoptopenjdk.list
     - echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    - wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
     - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
     - apt-get update
-    - apt-get -y install google-cloud-sdk google-cloud-sdk-app-engine-python
+    - apt-get -y install google-cloud-sdk google-cloud-sdk-app-engine-python adoptopenjdk-8-hotspot
     - gcloud components install cloud-datastore-emulator
     - pip install django==2.2
     - django-admin.py startproject --template . --extension py,yaml,md myproject
