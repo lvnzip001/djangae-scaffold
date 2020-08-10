@@ -5,7 +5,7 @@ django22:
   image: python:3.8
   stage: test
   before_script:
-    - echo "deb http://packages.cloud.google.com/apt cloud-sdk-jessie main" | tee /etc/apt/sources.list.d/google-cloud-sdk.list
+    - echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
     - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
     - apt-get update
     - apt-get -y install google-cloud-sdk google-cloud-sdk-datastore-emulator google-cloud-sdk-app-engine-python
