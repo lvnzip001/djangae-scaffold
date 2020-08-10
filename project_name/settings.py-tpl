@@ -126,3 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Djangae Specific settings
+
+# Set this to the location where your app is deployed.
+# Available on the App Engine dashboard.
+CLOUD_TASKS_LOCATION = "europe-west"
