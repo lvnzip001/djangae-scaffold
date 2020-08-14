@@ -27,21 +27,24 @@ SECRET_KEY = '{{ secret_key }}'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.appspot.com',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'djangae',
-    'djangae.tasks',
-    'djangae.contrib.security',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangae',
+    'djangae.tasks',
+    'djangae.contrib.googleauth',
+    'djangae.contrib.security',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +52,8 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'djangae.contrib.googleauth.middleware.LocalIAPLoginMiddleware',
+    'djangae.contrib.googleauth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
