@@ -14,3 +14,12 @@ $ django-admin.py startproject --template https://github.com/potatolondon/djanga
 
 3. Create a virtualenv and activate it (e.g. `virtualenv .venv && source .venv/bin/activate`)
 4. Install the requirements: `pip3 install -r requirements.txt`
+
+# Differences to the Standard Template
+
+ - Settings are divided into "default" and "production". Production sets DEBUG=False, and a number of security
+   settings
+ - App Engine specific files are included (e.g. app.yaml, .gcloudignore)
+ - requirements.txt and requirements-dev.txt are provided for basic Djangae functionality
+ - manage.py is updated to run various Google Cloud emulators locally when running management commands
+ - '.appspot.com' is added to ALLOWED_HOSTS by default
