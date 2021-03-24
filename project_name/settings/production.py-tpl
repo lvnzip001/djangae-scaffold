@@ -1,6 +1,10 @@
 
 from .default import *
 
+ALLOWED_HOSTS = [
+    '.appspot.com',
+]
+
 # Disable DEBUG on production
 DEBUG = False
 
