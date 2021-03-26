@@ -35,6 +35,11 @@ SECURE_REDIRECT_EXEMPT = [
     r"^_ah/"
 ]
 
+# CSP Configuration
+
+CSP_REPORT_ONLY = False
+
+
 # Un-comment if using cache with Cloud Memory Store memcache. For LOCATION use
 # the 'Discovery endpoint' value for the instance.
 #CACHES = {
