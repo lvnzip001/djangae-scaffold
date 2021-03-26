@@ -34,3 +34,12 @@ SECURE_REDIRECT_EXEMPT = [
     # Django compares these to request.path.lstrip("/"), hence the lack of preceding /
     r"^_ah/"
 ]
+
+# Un-comment if using cache with Cloud Memory Store memcache. For LOCATION use
+# the 'Discovery endpoint' value for the instance.
+#CACHES = {
+#    "default": {
+#        "BACKEND": "django.core.cache.backends.memcached.MemcachedCache",
+#        "LOCATION": "x.x.x.x:11211",
+#    }
+#}
