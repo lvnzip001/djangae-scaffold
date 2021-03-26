@@ -36,12 +36,3 @@ SECURE_REDIRECT_EXEMPT = [
 ]
 
 DEBUG = False
-
-# Add the cached template loader for the Django template system (not for Jinja)
-for template in TEMPLATES:
-    template['OPTIONS']['debug'] = False
-    if template['BACKEND'] == 'django.template.backends.django.DjangoTemplates':
-        # Wrap the normal loaders with the cached loader
-        template['OPTIONS']['loaders'] = [
-            ('django.template.loaders.cached.Loader', template['OPTIONS']['loaders'])
-        ]
