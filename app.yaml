@@ -20,13 +20,6 @@ handlers:
 env_variables:
   DJANGO_SETTINGS_MODULE: "{{project_name}}.settings.staging"
 
-  # When using Cloud Memory Store (Memcache/Redis) add connection details
-  #
-  # MEMCACHED_HOST: '10.13.0.5'
-  # MEMCACHED_PORT: '11211'
-  # REDIS_HOST: '10.13.0.5'
-  # REDIS_PORT: '6379'
-
 # When using Serverless VPC connector (to access Cloud Memory Store for
 # example) un-comment the following adding GCP project ID, location (eg
 # us-central1) and connector name
