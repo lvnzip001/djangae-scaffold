@@ -23,3 +23,5 @@ $ django-admin.py startproject --template https://github.com/potatolondon/djanga
  - requirements.txt and requirements-dev.txt are provided for basic Djangae functionality
  - manage.py is updated to run various Google Cloud emulators locally when running management commands
  - '.appspot.com' is added to ALLOWED_HOSTS by default
+ - [Google Cloud Logging](https://cloud.google.com/logging/docs) is enabled in production
+ - [Google Cloud Debugger](https://cloud.google.com/debugger/docs/setup/python) is enabled in production

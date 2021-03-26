@@ -3,3 +3,4 @@ git+https://github.com/potatolondon/djangae.git#egg=djangae
 GoogleAppEngineCloudStorageClient==1.9.22.1
 google-cloud-tasks==1.5.0
 google-cloud-logging==1.15.0
+google-python-cloud-debugger==2.15.0; sys_platform == 'linux'
