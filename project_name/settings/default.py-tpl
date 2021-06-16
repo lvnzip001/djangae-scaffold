@@ -82,16 +82,16 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
 
-DJANGAEIDX_YAML = os.path.join(
+DATASTORE_INDEX_YAML = os.path.join(
     os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-    "djangaeidx.yaml"
+    "dsindex.yaml"
 )
 
 DATABASES = {
     'default': {
         'ENGINE': 'gcloudc.db.backends.datastore',
         'PROJECT': '{{ project_name }}',
-        'INDEXES_FILE': DJANGAEIDX_YAML,
+        'INDEXES_FILE': DATASTORE_INDEX_YAML,
     }
 }
 
