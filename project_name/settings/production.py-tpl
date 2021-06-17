@@ -1,6 +1,10 @@
 
 from .default import *
 
+ALLOWED_HOSTS = [
+    '.appspot.com',
+]
+
 # Disable DEBUG on production
 DEBUG = False
 
@@ -10,7 +14,7 @@ _LOCAL_ONLY_MIDDLEWARE = (
 )
 
 MIDDLEWARE = [
-    x for x in in MIDDLEWARE
+    x for x in MIDDLEWARE
     if x not in _LOCAL_ONLY_MIDDLEWARE
 ]
 
@@ -31,13 +35,16 @@ SECURE_REDIRECT_EXEMPT = [
     r"^_ah/"
 ]
 
-DEBUG = False
+# CSP Configuration
 
-# Add the cached template loader for the Django template system (not for Jinja)
-for template in TEMPLATES:
-    template['OPTIONS']['debug'] = False
-    if template['BACKEND'] == 'django.template.backends.django.DjangoTemplates':
-        # Wrap the normal loaders with the cached loader
-        template['OPTIONS']['loaders'] = [
-            ('django.template.loaders.cached.Loader', template['OPTIONS']['loaders'])
-        ]
+CSP_REPORT_ONLY = False
+
+
+# Un-comment if using cache with Cloud Memory Store memcache. For LOCATION use
+# the 'Discovery endpoint' value for the instance.
+#CACHES = {
+#    "default": {
+#        "BACKEND": "django.core.cache.backends.memcached.MemcachedCache",
+#        "LOCATION": "x.x.x.x:11211",
+#    }
+#}
