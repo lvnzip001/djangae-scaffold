@@ -9,11 +9,12 @@ using the [Djangae](https://github.com/potatolondon/djangae) framework.
 2. Run the following command, replacing `myproject` with the name of your project
 
 ```
-$ django-admin.py startproject --template https://github.com/potatolondon/djangae-scaffold/zipball/master --extension py,yaml,md myproject
+$ django-admin.py startproject --template https://gitlab.com/potato-oss/djangae/djangae-scaffold/-/archive/master/djangae-scaffold-master.zip --extension py,yaml,md myproject
 ```
 
 3. Create a virtualenv and activate it (e.g. `virtualenv .venv && source .venv/bin/activate`)
 4. Install the requirements: `pip3 install -r requirements.txt`
+5. Install the local development requirements: `pip3 install -r requirements-dev.txt`
 
 # Differences to the Standard Template
 

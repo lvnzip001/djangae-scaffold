@@ -1,7 +1,7 @@
 stages:
   - test
 
-django22:
+django32:
   image: python:3.8
   stage: test
   before_script:
@@ -10,7 +10,7 @@ django22:
     - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
     - apt-get update
     - apt-get -y install google-cloud-sdk google-cloud-sdk-app-engine-python google-cloud-sdk-datastore-emulator
-    - pip install django==2.2
+    - pip install django==3.2
     - django-admin.py startproject --template . --extension py,yaml,md myproject
     - cd myproject
     - pip install -r requirements.txt
