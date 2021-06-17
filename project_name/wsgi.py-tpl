@@ -15,7 +15,7 @@ from djangae.environment import is_production_environment
 import google.cloud.logging
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{ project_name }}.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{ project_name }}.settings.default')
 
 
 if is_production_environment():
