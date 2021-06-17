@@ -26,3 +26,6 @@ $ django-admin.py startproject --template https://gitlab.com/potato-oss/djangae/
  - '.appspot.com' is added to ALLOWED_HOSTS by default
  - [Google Cloud Logging](https://cloud.google.com/logging/docs) is enabled in production
  - [Google Cloud Debugger](https://cloud.google.com/debugger/docs/setup/python) is enabled in production
+ - Google IAP authentication, and the `djangae.contrib.googleauth` User model are both configured by default
+ - Username/password authentication backend is disabled by default
+ - The default database is configured to use Google Cloud Datastore
