@@ -29,3 +29,4 @@ $ django-admin.py startproject --template https://gitlab.com/potato-oss/djangae/
  - Google IAP authentication, and the `djangae.contrib.googleauth` User model are both configured by default
  - Username/password authentication backend is disabled by default
  - The default database is configured to use Google Cloud Datastore
+ - Staticfiles is configured to serve from the 'static' folder by default
