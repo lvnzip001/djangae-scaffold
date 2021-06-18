@@ -3,3 +3,4 @@ requirements-dev.txt
 .iap-credentials
 .cloudstorage
 .venv
+.env
