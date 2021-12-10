@@ -2,7 +2,6 @@ django>=3.2,<3.3
 git+https://github.com/potatolondon/djangae.git#egg=djangae
 GoogleAppEngineCloudStorageClient==1.9.22.1
 google-cloud-tasks==1.5.0
-google-cloud-logging==1.15.0
 google-python-cloud-debugger==2.17.0; sys_platform == 'linux'
 django-csp==3.7
 oauthlib==3.1.1
