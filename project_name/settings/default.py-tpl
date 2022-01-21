@@ -14,6 +14,7 @@ import os
 
 from pathlib import Path
 from djangae.contrib.secrets import get
+from djangae.environment import project_id
 from djangae.settings_base import *  # noqa
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -91,7 +92,7 @@ DATASTORE_INDEX_YAML = os.path.join(
 DATABASES = {
     'default': {
         'ENGINE': 'gcloudc.db.backends.datastore',
-        'PROJECT': '{{ project_name }}',
+        'PROJECT': project_id(default='{{ project_name }}'),
         'INDEXES_FILE': DATASTORE_INDEX_YAML,
     }
 }
